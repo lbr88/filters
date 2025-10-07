@@ -18,6 +18,15 @@
 @@||reddit.com^$from=bing.com
 @@||reddit.com^$from=duckduckgo.com
 
+! custom filters for on-site browsing reddit
+www.reddit.com##shreddit-app[pagetype="home"] .main-container
+www.reddit.com##shreddit-app[pagetype="popular"] #subgrid-container
+www.reddit.com##shreddit-app[pagetype="all"] .main-container
+! block subreddits
+www.reddit.com##shreddit-app[pagetype="community"] .main-container
+! block custom feeds
+www.reddit.com##shreddit-app[pagetype="custom_feed"] .main-container
+
 ! Allow Reddit from other specific referrers (e.g., X)
 @@||reddit.com^$from=x.com
 
