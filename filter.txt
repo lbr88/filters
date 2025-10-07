@@ -1,14 +1,25 @@
+[title] lbr88 Filters (Custom)
 ! uBlock Origin custom filters to block Reddit except for direct links from search engines
-||reddit.com^$important
-||*.reddit.com^$important
-||redd.it^$important
+! Allows Reddit access from search engine results or specific referrers, blocks otherwise
+! Last updated: October 7, 2025
+
+! Block all Reddit domains by default (document-level and general)
+||reddit.com^|$doc,important
+||*.reddit.com^|$doc,important
+||redd.it^|$doc,important
+||reddit.com/top^|$doc,important
+
+! Allow Reddit when referred from common search engines (no wildcards)
 @@||reddit.com^$from=google.com
-@@||reddit.com^$from=*.google.com
 @@||reddit.com^$from=bing.com
-@@||reddit.com^$from=*.bing.com
 @@||reddit.com^$from=duckduckgo.com
-@@||reddit.com^$from=*.duckduckgo.com
+
+! Allow Reddit from other specific referrers (e.g., X)
 @@||reddit.com^$from=x.com
-@@||reddit.com^$from=*.x.com
+
+! Block Reddit's tracking and ad domains
 ||redditstatic.com^$important
 ||redditmedia.com^$important
+
+! Cosmetic filter to hide Reddit homepage content (fallback)
+reddit.com##shreddit-app[pagetype="home"] #subgrid-container
