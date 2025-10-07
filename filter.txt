@@ -1,7 +1,11 @@
-[title] lbr88 Filters (Custom)
+! Title: Reddit Blocker (Custom)
+! Description: Custom filters to block Reddit except for direct links from search engines like Google, Bing, and DuckDuckGo.
+! Homepage: https://github.com/lbr88/filters
+! Last updated: October 7, 2025
+! Expires: 7 days (update frequency)
+
 ! uBlock Origin custom filters to block Reddit except for direct links from search engines
 ! Allows Reddit access from search engine results or specific referrers, blocks otherwise
-! Last updated: October 7, 2025
 
 ! Block all Reddit domains by default (document-level and general)
 ||reddit.com^|$doc,important
