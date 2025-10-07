@@ -27,3 +27,7 @@
 
 ! Cosmetic filter to hide Reddit homepage content (fallback)
 reddit.com##shreddit-app[pagetype="home"] #subgrid-container
+
+! Sentia custom cursor removal
+sentia.com##body { cursor: unset !important }
+sentia.com##.custom-cursor { display:none !important }
