@@ -1,0 +1,11 @@
+! uBlock Origin custom filters to block Reddit except for direct links from search engines ! Allows Reddit access from search engine results or specific referrers, blocks otherwise
+
+! Block all Reddit domains by default ||reddit.com^$important ||*.reddit.com^$important ||redd.it^$important
+
+! Allow Reddit when referred from common search engines @@||reddit.com^$from=google.com @@||reddit.com^$from=.google.com @@||reddit.com^$from=bing.com @@||reddit.com^$from=.bing.com @@||reddit.com^$from=duckduckgo.com @@||reddit.com^$from=*.duckduckgo.com
+
+! Optionally, allow Reddit from other specific referrers (e.g., direct links from trusted sites) ! Example: Allow links from X @@||reddit.com^$from=x.com @@||reddit.com^$from=*.x.com
+
+! Block Reddit's tracking and ads ||redditstatic.com^$important ||redditmedia.com^$important
+
+! Notes: ! - The $from modifier checks the referrer (where the link is clicked from). ! - Add more @@ exceptions for other search engines or sites as needed (e.g., @@||reddit.com^$from=yahoo.com). ! - Test filters to ensure they work as expected for your use case.
