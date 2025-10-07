@@ -22,8 +22,8 @@
 @@||reddit.com^$from=x.com
 
 ! Block Reddit's tracking and ad domains
-||redditstatic.com^$important
-||redditmedia.com^$important
+!||redditstatic.com^$important
+!||redditmedia.com^$important
 
 ! Cosmetic filter to hide Reddit homepage content (fallback)
 reddit.com##shreddit-app[pagetype="home"] #subgrid-container
